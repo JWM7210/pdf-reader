@@ -79,18 +79,7 @@
     </div>
 
     <script>
-      const url = "pdfs/";
-
-pdfjsLib.getDocument(url).promise.then(pdf => {
-    pdfDoc = pdf;
-
-    const savedPage = localStorage.getItem("savedPage");
-    pageNum = savedPage ? parseInt(savedPage) : 1;
-
-    document.getElementById("page-count").textContent = pdf.numPages;
-    controls.style.display = "block";
-    renderPage(pageNum);
-});
+    
 
 function queueRenderPage(num) {
     if (pageIsRendering) {
